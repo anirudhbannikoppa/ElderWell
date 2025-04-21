@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-// import "./App.css";
 import axios from "axios";
-// import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown";
 
 function App() {
   const [chatHistory, setChatHistory] = useState([]);
@@ -61,17 +60,10 @@ function App() {
     <div className="inset-0 bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="h-full max-w-4xl mx-auto flex flex-col p-3">
         {/* Fixed Header */}
-        <header className="text-center py-4">
-          <a
-            href="https://github.com/Vishesh-Pandey/chat-ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <h1 className="text-4xl font-bold text-blue-500 hover:text-blue-600 transition-colors">
-              Chat AI
-            </h1>
-          </a>
+        <header className="text-center py-1 ">
+          <h1 className="text-4xl font-bold text-customPurple hover:text-blue-600 transition-colors">
+            Chat AI
+          </h1>
         </header>
 
         {/* Scrollable Chat Container - Updated className */}
@@ -82,7 +74,7 @@ function App() {
           {chatHistory.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center p-6">
               <div className="bg-blue-50 rounded-xl p-8 max-w-2xl">
-                <h2 className="text-2xl font-bold text-blue-600 mb-4">
+                <h2 className="text-2xl font-bold text-customPurple mb-4">
                   Welcome to Chat AI! 👋
                 </h2>
                 <p className="text-gray-600 mb-4">
@@ -125,9 +117,7 @@ function App() {
                         : "bg-gray-100 text-gray-800 rounded-bl-none"
                     }`}
                   >
-                    {/* <ReactMarkdown className="overflow-auto hide-scrollbar">
-                      {chat.content}
-                    </ReactMarkdown> */}
+                    <ReactMarkdown>{chat.content}</ReactMarkdown>
                   </div>
                 </div>
               ))}
@@ -164,7 +154,7 @@ function App() {
             ></textarea>
             <button
               type="submit"
-              className={`px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors ${
+              className={`px-6 py-2 bg-customPurple text-white rounded-md hover:bg-blue-600 transition-colors ${
                 generatingAnswer ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={generatingAnswer}

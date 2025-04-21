@@ -11,8 +11,8 @@ const nav__links = [
     display: "Home",
   },
   {
-    path: "/programs",
-    display: "Programs",
+    path: "/aichat",
+    display: "AI Chat",
   },
   {
     path: "/membership",
