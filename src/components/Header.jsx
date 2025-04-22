@@ -15,8 +15,8 @@ const nav__links = [
     display: "AI Chat",
   },
   {
-    path: "/membership",
-    display: "Membership",
+    path: "/newsfeed",
+    display: "News Feed",
   },
   {
     path: "/track",
