@@ -23,6 +23,10 @@ const nav__links = [
     path: "/map",
     display: "map",
   },
+  {
+    path: "/records",
+    display: "my health records",
+  },
 ];
 
 const Header = () => {
