@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import "./App.css";
 import "aos/dist/aos.css";
 
+
 import Header from "./components/Header";
 
 import AllRoutes from "./components/AllRoutes";
