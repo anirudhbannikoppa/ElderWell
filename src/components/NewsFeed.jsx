@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Loader from "../UI/loader";
 
 const NewsFeed = () => {
   const [articles, setArticles] = useState([]);
@@ -37,7 +38,10 @@ const NewsFeed = () => {
     <div className="p-6 max-w-6xl mx-auto">
       <h2 className="text-2xl font-bold mb-6">Adult & Aging Health News</h2>
       {loading && !error ? (
-        <p>Loading...</p>
+        // Show loader while fetching data
+         <div className="flex items-center justify-center h-screen">
+       <Loader />
+          </div>
       ) : error ? (
         <p className="text-red-500">Error: {error}</p>
       ) : (

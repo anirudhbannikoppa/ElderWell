@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
   const [chatHistory, setChatHistory] = useState([]);
@@ -9,6 +10,7 @@ function App() {
   const [generatingAnswer, setGeneratingAnswer] = useState(false);
 
   const chatContainerRef = useRef(null);
+  const { user, isAuthenticated} = useAuth0();
 
   useEffect(() => {
     if (chatContainerRef.current) {
@@ -74,9 +76,14 @@ function App() {
           {chatHistory.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center p-6">
               <div className="bg-white rounded-xl p-6 max-w-2xl">
-                <h2 className="text-xl font-bold text-customPurple mb-2">
-                  Welcome to Chat AI! 👋
-                </h2>
+               {isAuthenticated && <h2 className="text-xl font-bold text-customPurple mb-2">
+                   Hi {user.name}  welcome to Chat AI! 👋
+                </h2>}
+                {!isAuthenticated && (
+                  <h2 className="text-xl font-bold text-customPurple mb-2">
+                    Welcome to Chat AI! 👋
+                  </h2>
+                )}  
                 <p className="text-gray-600 mb-2">
                   I'm here to help you with anything you'd like to know. You can
                   ask me about:
