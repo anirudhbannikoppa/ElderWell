@@ -8,9 +8,8 @@ function App() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [generatingAnswer, setGeneratingAnswer] = useState(false);
-
   const chatContainerRef = useRef(null);
-  const { user, isAuthenticated} = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
   useEffect(() => {
     if (chatContainerRef.current) {
@@ -64,7 +63,7 @@ function App() {
         {/* Fixed Header */}
         <header className="text-center py-1 ">
           <h1 className="text-2xl font-bold text-customPurple hover:text-blue-600 transition-colors">
-            Chat AI
+            AI Health Assistant Chat
           </h1>
         </header>
 
@@ -76,35 +75,39 @@ function App() {
           {chatHistory.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center p-6">
               <div className="bg-white rounded-xl p-6 max-w-2xl">
-               {isAuthenticated && <h2 className="text-xl font-bold text-customPurple mb-2">
-                   Hi {user.name}  welcome to Chat AI! 👋
-                </h2>}
+                {isAuthenticated && (
+                  <h2 className="text-xl font-bold text-customPurple mb-2">
+                    💬 Hello {user.name} I’m your Health Assistant
+                  </h2>
+                )}
                 {!isAuthenticated && (
                   <h2 className="text-xl font-bold text-customPurple mb-2">
-                    Welcome to Chat AI! 👋
+                    Welcome to Health Assistant 👋
                   </h2>
-                )}  
+                )}
                 <p className="text-gray-600 mb-2">
-                  I'm here to help you with anything you'd like to know. You can
-                  ask me about:
+                  I’m always here to help — whether you need advice, reminders,
+                  tech help, or just someone to chat with. Ask me anything!
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-1 text-left">
                   <div className="bg-gradient-to-r from-violet-50 to-violet-100 p-4 rounded-lg shadow-sm ">
-                    <span className="text-blue-500">💡</span> General knowledge
+                    <span className="text-blue-500">💡</span> Everyday Questions
                   </div>
                   <div className="bg-gradient-to-r from-violet-50 to-violet-100  p-4 rounded-lg shadow-sm ">
-                    <span className="text-blue-500">🔧</span> Technical
-                    questions
+                    <span className="text-blue-500">❤️</span> Body & Mind Health
                   </div>
                   <div className="bg-gradient-to-r from-violet-50 to-violet-100 p-4 rounded-lg shadow-sm ">
-                    <span className="text-blue-500">📝</span> Writing assistance
+                    <span className="text-blue-500">📝</span> Writing &
+                    Reminders
                   </div>
                   <div className="bg-gradient-to-r from-violet-50 to-violet-100 p-4 rounded-lg shadow-sm ">
-                    <span className="text-blue-500">🤔</span> Problem solving
+                    <span className="text-blue-500">😊</span> Emotional Support
+                    & Tips
                   </div>
                 </div>
                 <p className="text-gray-500 mt-4 text-sm">
-                  Just type your question below and press Enter or click Send!
+                  Just type in your question below and press Send. I’ll do my
+                  best to help you right away!
                 </p>
               </div>
             </div>

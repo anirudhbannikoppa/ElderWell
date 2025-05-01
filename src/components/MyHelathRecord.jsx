@@ -22,7 +22,10 @@ const MyHealthReports = () => {
 
   const handleFileChange = (e) => {
     const files = e.target.files;
-    setNewRecord({ ...newRecord, labReports: [...newRecord.labReports, ...Array.from(files)] });
+    setNewRecord({
+      ...newRecord,
+      labReports: [...newRecord.labReports, ...Array.from(files)],
+    });
   };
 
   const handleSubmit = (e) => {
@@ -41,7 +44,9 @@ const MyHealthReports = () => {
   };
 
   const handleDelete = (id) => {
-    const confirmDelete = window.confirm("Are you sure you want to delete this record?");
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this record?"
+    );
     if (confirmDelete) {
       setRecords(records.filter((record) => record.id !== id));
     }
@@ -69,7 +74,11 @@ const MyHealthReports = () => {
 
   return (
     <div className="p-8">
-      <h2 className="text-3xl font-bold mb-6">🩺 My Health Records</h2>
+      <header className="text-center py-1 ">
+        <h1 className="text-2xl font-bold text-customPurple hover:text-blue-600 transition-colors">
+          🩺 My Health Records
+        </h1>
+      </header>
 
       {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-4 mb-10">
@@ -148,7 +157,6 @@ const MyHealthReports = () => {
             placeholder="🗒️ Special Notes (optional)"
             className="border border-gray-300 rounded-md px-4 py-2 md:col-span-2"
           />
-          
         </div>
 
         <button
@@ -178,7 +186,10 @@ const MyHealthReports = () => {
           </thead>
           <tbody>
             {records.map((record) => (
-              <tr key={record.id} className="odd:bg-purple-50 even:bg-white text-sm">
+              <tr
+                key={record.id}
+                className="odd:bg-purple-50 even:bg-white text-sm"
+              >
                 <td className="p-3 border">{record.doctorName}</td>
                 <td className="p-3 border">{record.hospitalName}</td>
                 <td className="p-3 border">{record.date}</td>
@@ -198,7 +209,10 @@ const MyHealthReports = () => {
                             rel="noopener noreferrer"
                             className="text-purple-600 underline"
                           >
-                            📄 {file.name.length > 20 ? file.name.slice(0, 20) + "..." : file.name}
+                            📄{" "}
+                            {file.name.length > 20
+                              ? file.name.slice(0, 20) + "..."
+                              : file.name}
                           </a>
                         </li>
                       ))}

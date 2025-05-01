@@ -1,31 +1,19 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-// import Testimonials from "../UI/Testimonials";
-// import Pricing from "../UI/Pricing";
-// import Track from "../UI/Track";
 import Home from "../UI/Home";
 import Aichat from "./Aichat";
-import NewsFeed from "./NewsFeed";  
+import NewsFeed from "./NewsFeed";
 import Hospitalmap from "./Hospitalmap";
 import MyHealthRecords from "./MyHelathRecord";
-// import AuthButton from "./AuthButton";
-// import { useAuth0 } from "@auth0/auth0-react";
-// import Login from "../UI/LogIn/Login";
 
 const AllRoutes = () => {
-  // const { isAuthenticated } = useAuth0();
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/aichat" element={<Aichat />} />
       <Route path="/newsfeed" element={<NewsFeed />} />
       <Route path="/map" element={<Hospitalmap />} />
-      <Route path="/records" element={<MyHealthRecords/>} />
-      {/* <Route path="/auth" element={<AuthButton />} /> */}
-      {/* <Route path="/programs" element={<Testimonials />} />
-      <Route path="/membership" element={<Pricing />} /> */}
-      {/* <Route path="/track" element={isAuthenticated ? <Track /> : <Login />} /> */}
+      <Route path="/records" element={<MyHealthRecords />} />\
     </Routes>
   );
 };

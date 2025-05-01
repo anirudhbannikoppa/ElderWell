@@ -8,9 +8,13 @@ export default {
     extend: {
       colors: {
         customPurple: '#6f55f2',
+        litepurple:  '#eeeaff',
       },
+      fontFamily: {
+        questrial: ['"Questrial"', 'sans-serif'],
     },
   },
   plugins: [],
+}
 }
 

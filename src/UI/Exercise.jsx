@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/exercise.css";
-// import lunges from "../assets/img/lunges.png";
-// import yoga from "../assets/img/yoga-pose.png";
-// import ex from "../assets/img/extended.png";
+import lunges from "../assets/img/lunges.png";
+import yoga from "../assets/img/yoga-pose.png";
+import ex from "../assets/img/extended.png";
 
 const Exercise = () => {
   return (
@@ -10,11 +10,13 @@ const Exercise = () => {
       <div className="container exercise__top">
         <div className="exercise__top">
           <h2 className="section__title">
-            Benefits of <span className="highlights">Exersice</span>
+            🌿 What <span className="highlights">ElderWell</span> Can Help You
+            With
           </h2>
           <p>
-            Exercise is essential for maintaining a healthy body and mind,
-            <br /> and can improve quality of life in numerous ways.
+            We believe that wellness is more than just exercise — it’s about
+            feeling good,
+            <br /> staying safe, and staying connected.
           </p>
         </div>
         <div className="exercise__wrapper">
@@ -24,14 +26,14 @@ const Exercise = () => {
             data-aos="zoom-in"
           >
             <span className="exercise__icon">
-              {/* <img src={lunges} alt="err" /> */}
+              <img src={lunges} alt="err" />
             </span>
 
             <div className="exercise__content">
-              <h4>Healthy Life</h4>
+              <h4> Health & Care</h4>
               <p>
-                Living a healthy life involves taking care of both your physical
-                and mental health.
+                Keep track of medical info, find nearby hospitals, and access
+                health tips.
               </p>
             </div>
           </div>
@@ -42,14 +44,14 @@ const Exercise = () => {
             data-aos="zoom-in"
           >
             <span className="exercise__icon">
-              {/* <img src={yoga} alt="err" /> */}
+              <img src={yoga} alt="err" />
             </span>
 
             <div className="exercise__content">
-              <h4>Increased Flexibility</h4>
+              <h4>Mind & Movement</h4>
               <p>
-                Increased flexibility is an important aspect of physical fitness
-                that can offer a range of benefits
+                Gentle activities, stress relief techniques, and routines for
+                better sleep and flexibility.
               </p>
             </div>
           </div>
@@ -60,14 +62,14 @@ const Exercise = () => {
             data-aos="zoom-in"
           >
             <span className="exercise__icon">
-              {/* <img src={ex} alt="err" /> */}
+              <img src={ex} alt="err" />
             </span>
 
             <div className="exercise__content">
-              <h4>Reducing Blood Pressure</h4>
+              <h4>Daily Life Support</h4>
               <p>
-                Regular physical activity can help lower blood pressure and
-                improve overall cardiovascular health.
+                Helpful resources for nutrition, safety, caregiving, and
+                emotional well-being.
               </p>
             </div>
           </div>

@@ -1,13 +1,16 @@
-import React from 'react'
-import { createContext,useState,useEffect } from "react";
+import React from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
-const AuthContextProvider = ({children}) => {
-    const [filter,setFilter] = useState("");
-    
+const AuthContextProvider = ({ children }) => {
+  const [filter, setFilter] = useState("");
 
-    return <AuthContext.Provider value={{filter,setFilter}}>{children}</AuthContext.Provider> 
-}
+  return (
+    <AuthContext.Provider value={{ filter, setFilter }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
-export default AuthContextProvider
+export default AuthContextProvider;

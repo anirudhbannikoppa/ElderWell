@@ -151,3 +151,26 @@ ul {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.footer-content{
+  padding-left: 0%;
+}
+.sticky__header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+}
+.register__btn {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  font-family: (--font-name);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+} 
